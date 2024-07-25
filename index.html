@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .Body {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: rgb(29, 25, 25);
+            color: white;
+        }
+        
+        input[type="text"] {
+            margin-top: 20px;
+            width: 70%;
+            /* Adjusted width to be responsive */
+            max-width: 600px;
+            /* Set maximum width */
+            height: 60px;
+            font-size: 4vw;
+            /* Adjusted font size to be responsive */
+            border: 2px solid black;
+            text-align: right;
+            background-color: rgb(227, 203, 203);
+            border-radius: 5px;
+            padding-right: 0.5rem;
+            box-shadow: 0 14px 18px 0 rgba(252, 252, 252, 0.2), 0 16px 20px 0 rgba(33, 197, 170, 0.19);
+        }
+        
+        button {
+            width: 10%;
+            /* Adjusted width to be responsive */
+            max-width: 80px;
+            /* Set maximum width */
+            height: 50px;
+            font-size: 1.89vw;
+            /* Adjusted font size to be responsive */
+            background-color: rgb(194, 183, 183);
+            border: 3px solid #04AA6D;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 1vw;
+            /* Adjusted margin for spacing */
+        }
+        
+        button:hover {
+            background-color: #04AA6D;
+            color: white;
+            box-shadow: 0 4px 8px 0 rgba(204, 131, 131, 0.2), 0 6px 20px 0 rgba(207, 179, 179, 0.19);
+        }
+        
+        @media only screen and (max-width: 50px) {
+            /* Adjust styles for smaller screens if needed */
+            input[type="text"] {
+                font-size: 3vw;
+            }
+            button {
+                font-size: 10vw;
+            }
+        }
+        
+        #Red-color:hover {
+            border: white;
+            background-color: #f44336;
+        }
+    </style>
+    <link rel="shortcut icon" href="calculator2.png">
+</head>
+
+<body>
+    <div class="Body">
+        <u><h1>Specific Calculator</h1></u>
+
+        <input type="text" id="screen" placeholder="0"><br><br>
+
+        <button onclick="backspace()" id="Red-color">CE</button>
+        <button onclick="factorial()" id="green-color">x!</button>
+        <button class="btn" id="green-color">(</button>
+        <button class="btn" id="green-color">)</button>
+        <button class="btn" id="green-color">%</button>
+        <button onclick=" screen.value='' " id="Red-color">C</button><br><br>
+
+        <button onclick="sin() " id="green-color">sin</button>
+        <button onclick="pi() " id="green-color">&#8508</button>
+        <button class="btn " id="green-color">7</button>
+        <button class="btn " id="green-color">8</button>
+        <button class="btn " id="green-color">9</button>
+        <button class="btn " id="green-color">*</button><br><br>
+
+        <button onclick="cos() " id="green-color">cos</button>
+        <button onclick="log() " id="green-color">log</button>
+        <button class="btn " id="green-color">6</button>
+        <button class="btn " id="green-color">5</button>
+        <button class="btn " id="green-color">4</button>
+        <button class="btn " id="green-color">-</button><br><br>
+
+        <button onclick="tan() " id="green-color">tan</button>
+        <button onclick="sqrt() " id="green-color">&#8730</button>
+        <button class="btn " id="green-color">3</button>
+        <button class="btn " id="green-color">2</button>
+        <button class="btn " id="green-color">1</button>
+        <button class="btn " id="green-color">+</button><br><br>
+
+        <button onclick="e() " id="green-color">e</button>
+        <button onclick="pow() " id="green-color">x<sup>2</sup></button>
+        <button class="btn " id="green-color">0</button>
+        <button class="btn " id="green-color">.</button>
+        <button onclick="screen.value=eval(screen.value) " id="black-color">=</button>
+        <button class="btn" id="green-color">/</button><br><br>
+        <button onclick="radian() " id="green-color">Rad</button>
+        <button onclick="Degree() " id="green-color">Deg</button>
+    </div>
+    <script src="index.js"></script>
+
+
+</body>
+
+</html>
